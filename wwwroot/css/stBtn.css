@@ -1,0 +1,76 @@
+/*del*/
+.VsDel {
+    border: 1px solid #dc3545;
+    padding: 0 0.75rem 0.4rem;
+    border-radius: 0.4rem;
+    color: #dc3545;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: xx-large;
+    transition: 0.5s;
+}
+.VsDel:hover {
+    transition: 0.5s;
+    border-radius: 0;
+    color: white;
+    background: #dc3545;
+}
+/*edit*/
+.VsEdit {
+    border: 1px solid #FC8728;
+    padding: 0 0.75rem 0.4rem;
+    border-radius: 0.4rem;
+    color: #FC8728;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: xx-large;
+    transition: 0.5s;
+}
+.VsEdit:hover {
+    transition: 0.5s;
+    border-radius: 0;
+    color: white;
+    background: #FC8728;
+}
+/*add*/
+.VsAddM {
+    border: 1px solid #0d6efd;
+    padding: 0 0.75rem 0.4rem;
+    border-radius: 0.4rem;
+    color: #0d6efd;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: xx-large;
+    transition: 0.5s;
+}
+.VsAddM:hover {
+    transition: 0.5s;
+    border-radius: 0;
+    color: white;
+    background: #0d6efd;
+}
+
+.VsAddV {
+    border: 1px solid #0d6efd;
+    padding: 0 0.75rem 0.4rem;
+    border-radius: 0.4rem;
+    color: #0d6efd;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+}
+.VsAddV:hover {
+    transition: 0.5s;
+    border-radius: 0;
+    color: white;
+    background: #0d6efd;
+}
+.VsAddV a {
+	text-decoration:none;
+	color:unset;
+}

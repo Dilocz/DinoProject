@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var whens = ViewData["whens"] as List<When>;
+}
+<form asp-controller="Home" asp-action="AddDina" method="post" enctype="multipart/form-data" class="m-3">
+    <div class="m-3">
+        <label for="name" class="form-label">Jméno Dina</label>
+        <input type="text" name="name" id="name" required class="form-control">
+    </div>
+    <div class="m-3">
+        <label for="popis" class="form-label">Popis Dina</label>
+        <textarea name="popis" id="popis" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <div class="m-3">
+        <label for="when" class="form-label">Kdy žil</label>
+        <select name="when" id="when" class="form-select">
+            @foreach(When when in whens)
+            {
+                <option value="@when.Id">@when.Name</option>
+            }
+        </select>
+    </div>
+    <div class="m-3">
+        <label for="pic" class="form-label">Obrázek Dina</label>
+        <input type="file" name="pic" id="pic" class="form-control">
+    </div>
+    <div class="m-3">
+        <input type="submit" value="Uložit" class="form-control btn btn-primary">
+        <input class="form-control btn btn-danger mt-1" value="Reset" type="reset">
+    </div>
+</form>

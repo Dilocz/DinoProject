@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var dinos = ViewData["dinos"] as List<Dino>;
+}
+<div class="VsKontejner">
+    @foreach(Dino dino in dinos)
+    {
+    <div class="VsContent">
+        <div class="VsContentP">
+            <img class="VsImg" src="img/@dino.Photo" alt="">
+            <div class="VsDown">
+                <div class="VsDownUp">
+                    <h3>@dino.Name</h3>
+                    <p>@dino.When.Name</p>
+                </div>
+                <div class="VsDownDown">
+                    <div>
+                        <p>@dino.Description</p>
+                    </div>
+                    <div class="VsAkce">
+                        <a asp-controller="Home" asp-action="Del" asp-route-id="@dino.Id" asp-route-photo="@dino.Photo" class="VsDel">×</a>
+                        <a asp-controller="Home" asp-action="Edit" asp-route-id="@dino.Id" asp-route-photo="@dino.Photo" class="VsEdit">Upravit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+    <div class="VsAddV">
+        <a asp-controller="Home" asp-action="Form">+</a>
+    </div>
+</div>
